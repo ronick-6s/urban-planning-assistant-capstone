@@ -1,0 +1,718 @@
+/* Import elegant fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+/* CSS Variables - Minimal Color Palette */
+:root {
+  --vogue-bg: #ffffff;
+  --vogue-surface: #fafafa;
+  --vogue-border: #e5e7eb;
+  --vogue-text-primary: #111827;
+  --vogue-text-secondary: #6b7280;
+  --vogue-text-muted: #9ca3af;
+  --vogue-accent: #000000;
+  --vogue-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --vogue-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --vogue-radius: 12px;
+  --vogue-font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --vogue-font-display: 'Playfair Display', serif;
+}
+
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--vogue-font-primary);
+  background: var(--vogue-bg);
+  color: var(--vogue-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Login Screen */
+.vogue-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+
+.vogue-login-container {
+  text-align: center;
+  max-width: 480px;
+  padding: 3rem 2rem;
+}
+
+.vogue-title {
+  font-family: var(--vogue-font-display);
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--vogue-text-primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+.vogue-subtitle {
+  font-size: 1.125rem;
+  color: var(--vogue-text-secondary);
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.vogue-user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.vogue-user-card {
+  background: white;
+  border: 1px solid var(--vogue-border);
+  border-radius: var(--vogue-radius);
+  padding: 2rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: var(--vogue-shadow);
+}
+
+.vogue-user-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--vogue-shadow-lg);
+  border-color: var(--user-color, var(--vogue-accent));
+}
+
+.vogue-user-avatar {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.vogue-user-name {
+  font-weight: 500;
+  color: var(--vogue-text-primary);
+  font-size: 1rem;
+}
+
+/* Email Form */
+.vogue-email-form {
+  background: white;
+  border: 1px solid var(--vogue-border);
+  border-radius: var(--vogue-radius);
+  padding: 2.5rem;
+  box-shadow: var(--vogue-shadow-lg);
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.vogue-email-form h3 {
+  font-family: var(--vogue-font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--vogue-text-primary);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.vogue-email-form p {
+  color: var(--vogue-text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.vogue-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.vogue-form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.vogue-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  min-width: 80px;
+}
+
+.vogue-btn--primary {
+  background: var(--vogue-accent);
+  color: white;
+}
+
+.vogue-btn--primary:hover:not(:disabled) {
+  background: #1f2937;
+}
+
+.vogue-btn--primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.vogue-btn--secondary {
+  background: transparent;
+  color: var(--vogue-text-secondary);
+  border: 1px solid var(--vogue-border);
+}
+
+.vogue-btn--secondary:hover {
+  background: var(--vogue-surface);
+  color: var(--vogue-text-primary);
+}
+
+/* Main App Layout */
+.vogue-app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--vogue-bg);
+}
+
+/* Header */
+.vogue-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--vogue-border);
+  background: var(--vogue-bg);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.vogue-header-left {
+  flex: 1;
+}
+
+.vogue-logo {
+  font-family: var(--vogue-font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--vogue-text-primary);
+  letter-spacing: -0.025em;
+}
+
+.vogue-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.vogue-new-chat,
+.vogue-report-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--vogue-border);
+  border-radius: 8px;
+  background: white;
+  color: var(--vogue-text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vogue-new-chat:hover,
+.vogue-report-btn:hover:not(:disabled) {
+  background: var(--vogue-surface);
+  border-color: var(--vogue-text-secondary);
+}
+
+.vogue-report-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* User Dropdown */
+.vogue-user-dropdown {
+  position: relative;
+}
+
+.vogue-user-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--vogue-border);
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.vogue-user-trigger:hover {
+  background: var(--vogue-surface);
+}
+
+.vogue-user-avatar-small {
+  font-size: 1rem;
+}
+
+.vogue-user-name-small {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--vogue-text-primary);
+}
+
+.vogue-user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  background: white;
+  border: 1px solid var(--vogue-border);
+  border-radius: var(--vogue-radius);
+  box-shadow: var(--vogue-shadow-lg);
+  min-width: 160px;
+  z-index: 200;
+}
+
+.vogue-user-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.875rem;
+}
+
+.vogue-user-menu-item:hover {
+  background: var(--vogue-surface);
+}
+
+.vogue-user-menu-item.active {
+  background: var(--vogue-surface);
+  color: var(--user-color, var(--vogue-accent));
+  font-weight: 500;
+}
+
+/* Main Chat Area */
+.vogue-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 73px);
+}
+
+.vogue-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vogue-message {
+  display: flex;
+  max-width: 70%;
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vogue-message--user {
+  align-self: flex-end;
+}
+
+.vogue-message--assistant {
+  align-self: flex-start;
+}
+
+.vogue-message-content {
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--vogue-radius);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.vogue-message--user .vogue-message-content {
+  background: var(--vogue-accent);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.vogue-message--assistant .vogue-message-content {
+  background: var(--vogue-surface);
+  color: var(--vogue-text-primary);
+  border: 1px solid var(--vogue-border);
+  border-bottom-left-radius: 4px;
+}
+
+.vogue-message-content p {
+  margin: 0;
+}
+
+/* Markdown Styling */
+.vogue-message-content h1,
+.vogue-message-content h2,
+.vogue-message-content h3,
+.vogue-message-content h4,
+.vogue-message-content h5,
+.vogue-message-content h6 {
+  font-family: var(--vogue-font-display);
+  margin: 1.5rem 0 0.75rem 0;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.vogue-message-content h1 { font-size: 1.5rem; }
+.vogue-message-content h2 { font-size: 1.3rem; }
+.vogue-message-content h3 { font-size: 1.15rem; }
+
+.vogue-message-content ul,
+.vogue-message-content ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.vogue-message-content li {
+  margin: 0.25rem 0;
+}
+
+.vogue-message-content code {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+  font-size: 0.875rem;
+}
+
+.vogue-message-content pre {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.vogue-message-content pre code {
+  background: none;
+  padding: 0;
+}
+
+.vogue-message-content blockquote {
+  border-left: 3px solid var(--vogue-border);
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.02);
+  font-style: italic;
+}
+
+.vogue-message-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.vogue-message-content th,
+.vogue-message-content td {
+  border: 1px solid var(--vogue-border);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.vogue-message-content th {
+  background: var(--vogue-surface);
+  font-weight: 500;
+}
+
+/* Typing Indicator */
+.vogue-typing {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.vogue-typing span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--vogue-text-muted);
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.vogue-typing span:nth-child(1) { animation-delay: -0.32s; }
+.vogue-typing span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing {
+  0%, 80%, 100% { opacity: 0.3; }
+  40% { opacity: 1; }
+}
+
+/* Input Area */
+.vogue-input-area {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid var(--vogue-border);
+  background: var(--vogue-bg);
+}
+
+.vogue-input-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.vogue-input {
+  flex: 1;
+  padding: 0.875rem 1.25rem;
+  border: 1px solid var(--vogue-border);
+  border-radius: var(--vogue-radius);
+  font-size: 0.95rem;
+  background: white;
+  transition: all 0.2s ease;
+  font-family: var(--vogue-font-primary);
+}
+
+.vogue-input:focus {
+  outline: none;
+  border-color: var(--vogue-accent);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.vogue-input::placeholder {
+  color: var(--vogue-text-muted);
+}
+
+.vogue-send-btn {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--vogue-border);
+  border-radius: 50%;
+  background: var(--vogue-accent);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.vogue-send-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: var(--vogue-shadow);
+}
+
+.vogue-send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Modal */
+.vogue-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.vogue-modal {
+  background: white;
+  border-radius: var(--vogue-radius);
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: var(--vogue-shadow-lg);
+}
+
+.vogue-modal-title {
+  font-family: var(--vogue-font-display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--vogue-text-primary);
+}
+
+.vogue-modal-subtitle {
+  color: var(--vogue-text-secondary);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.vogue-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.vogue-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--vogue-text-primary);
+  font-size: 0.875rem;
+}
+
+.vogue-sessions-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid var(--vogue-border);
+  border-radius: 8px;
+  background: white;
+}
+
+.vogue-session-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--vogue-border);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.vogue-session-item:last-child {
+  border-bottom: none;
+}
+
+.vogue-session-item:hover {
+  background: var(--vogue-surface);
+}
+
+.vogue-session-preview {
+  font-size: 0.875rem;
+  color: var(--vogue-text-primary);
+  margin-bottom: 0.25rem;
+  line-height: 1.4;
+}
+
+.vogue-session-meta {
+  font-size: 0.75rem;
+  color: var(--vogue-text-secondary);
+}
+
+.vogue-modal-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.vogue-btn {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--vogue-border);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: var(--vogue-font-primary);
+}
+
+.vogue-btn--primary {
+  background: var(--vogue-accent);
+  color: white;
+  border-color: var(--vogue-accent);
+}
+
+.vogue-btn--primary:hover:not(:disabled) {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.vogue-btn--secondary {
+  background: white;
+  color: var(--vogue-text-primary);
+}
+
+.vogue-btn--secondary:hover {
+  background: var(--vogue-surface);
+}
+
+.vogue-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .vogue-header {
+    padding: 1rem;
+  }
+  
+  .vogue-logo {
+    font-size: 1.25rem;
+  }
+  
+  .vogue-messages {
+    padding: 1rem;
+  }
+  
+  .vogue-message {
+    max-width: 85%;
+  }
+  
+  .vogue-input-area {
+    padding: 1rem;
+  }
+  
+  .vogue-modal {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .vogue-user-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scrollbar Styling */
+.vogue-messages::-webkit-scrollbar,
+.vogue-sessions-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.vogue-messages::-webkit-scrollbar-track,
+.vogue-sessions-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.vogue-messages::-webkit-scrollbar-thumb,
+.vogue-sessions-list::-webkit-scrollbar-thumb {
+  background: var(--vogue-border);
+  border-radius: 3px;
+}
+
+.vogue-messages::-webkit-scrollbar-thumb:hover,
+.vogue-sessions-list::-webkit-scrollbar-thumb:hover {
+  background: var(--vogue-text-muted);
+}

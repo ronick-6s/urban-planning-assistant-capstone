@@ -1,0 +1,183 @@
+# Land Use Planning and Zoning
+
+## Fundamentals of Land Use Planning
+
+Land use planning is the systematic assessment of physical, social, and economic factors to encourage land uses that best serve the needs of people while safeguarding resources. It provides a framework for decision-making about the development and preservation of land.
+
+### Purpose and Goals
+
+Land use planning serves several important purposes:
+
+- Promoting efficient use of land and infrastructure
+- Separating incompatible uses to prevent conflicts
+- Protecting environmentally sensitive areas
+- Preserving agricultural lands and open spaces
+- Guiding growth and development
+- Balancing public interests with private property rights
+- Creating predictability for property owners and developers
+- Supporting community vision and goals
+
+### Components of Land Use Planning
+
+#### Comprehensive Plans
+
+Also called master plans or general plans, comprehensive plans establish a long-range vision for community development:
+
+- Future land use maps indicating desired development patterns
+- Goals and policies for growth management
+- Infrastructure and public facility needs
+- Housing and economic development strategies
+- Environmental protection measures
+- Implementation strategies
+
+Comprehensive plans typically have a 20-year horizon but are updated more frequently to remain relevant.
+
+#### Specialized Plans
+
+Communities often develop specialized plans focusing on specific geographic areas or topics:
+
+- Neighborhood plans
+- Downtown or commercial district plans
+- Corridor plans
+- Parks and recreation plans
+- Housing plans
+- Transportation plans
+- Historic preservation plans
+
+#### Implementation Tools
+
+Several tools translate land use plans into action:
+
+- Zoning ordinances and maps
+- Subdivision regulations
+- Design guidelines
+- Capital improvement programs
+- Development impact fees
+- Transfer of development rights
+- Conservation easements
+
+## Zoning Fundamentals
+
+Zoning is the primary regulatory tool used to implement land use plans by dividing a community into districts with specific regulations.
+
+### Traditional Zoning
+
+Conventional or Euclidean zoning (named after Euclid v. Ambler, the 1926 Supreme Court case that upheld zoning's constitutionality) separates uses into distinct districts:
+
+- Residential districts (often with varying densities like R-1, R-2, etc.)
+- Commercial districts
+- Industrial districts
+- Institutional districts
+- Agricultural districts
+- Open space and recreation districts
+
+For each district, zoning ordinances typically regulate:
+
+- Permitted, conditional, and prohibited uses
+- Building density (units per acre, floor area ratio)
+- Lot size, width, and coverage
+- Building height and setbacks
+- Parking requirements
+- Landscaping and screening
+
+### Contemporary Zoning Approaches
+
+Modern zoning has evolved to address limitations of traditional approaches:
+
+#### Mixed-Use Zoning
+
+Allows combination of residential, commercial, and sometimes light industrial uses:
+
+- Vertical mixed-use (different uses in same building)
+- Horizontal mixed-use (different uses adjacent within same development)
+- Benefits include walkability, round-the-clock activity, and efficient land use
+
+#### Form-Based Codes
+
+Emphasizes physical form over land use separation:
+
+- Focuses on relationship between building facades and public realm
+- Regulates form and scale of buildings and streets
+- Uses visual representations to clarify requirements
+- Often incorporates building typologies (townhouse, apartment, mixed-use, etc.)
+
+#### Performance-Based Zoning
+
+Establishes criteria for impacts rather than specific uses:
+
+- Regulates noise, traffic, pollution, etc.
+- Allows flexibility in use if performance standards are met
+- Can promote innovation and efficient resource use
+
+#### Incentive Zoning
+
+Offers bonuses to developers who provide public benefits:
+
+- Density bonuses for affordable housing
+- Height allowances for public space provision
+- Expedited review for green building features
+- Reduced parking requirements for transit-supportive development
+
+#### Overlay Districts
+
+Adds special provisions to base zoning for specific purposes:
+
+- Historic preservation overlays
+- Environmental protection overlays
+- Transit-oriented development overlays
+- Design review districts
+- Airport height restriction zones
+
+### Zoning Processes
+
+#### Zoning Administration
+
+Day-to-day administration typically involves:
+
+- Plan review for zoning compliance
+- Issuance of permits and approvals
+- Interpretation of zoning code provisions
+- Enforcement of zoning regulations
+
+#### Zoning Flexibility Mechanisms
+
+Zoning includes procedures to allow flexibility when appropriate:
+
+- Variances for properties with unique hardships
+- Special use permits for conditional uses
+- Planned unit developments (PUDs) for integrated projects
+- Rezoning procedures to change district boundaries
+- Nonconforming use provisions for pre-existing uses
+
+### Contemporary Issues in Land Use and Zoning
+
+#### Exclusionary Zoning and Housing Affordability
+
+Concerns about regulations that limit housing options:
+
+- Large minimum lot sizes that drive up housing costs
+- Restrictions on multifamily housing
+- Excessive parking requirements
+- Moving toward inclusionary zoning requirements
+
+#### Environmental Considerations
+
+Increasing integration of environmental protection:
+
+- Conservation subdivisions
+- Riparian buffer requirements
+- Steep slope regulations
+- Tree preservation ordinances
+- Green infrastructure requirements
+
+#### Smart Growth and Sustainability
+
+Zoning as a tool to promote sustainable development:
+
+- Higher densities around transit
+- Reduced parking requirements
+- Mixed-use zoning in appropriate locations
+- Urban growth boundaries
+- Infill development incentives
+
+Land use planning and zoning continue to evolve as communities face new challenges related to climate change, housing affordability, economic development, and changing demographics. Effective land use planning balances regulatory certainty with the flexibility needed to adapt to changing conditions and community needs.

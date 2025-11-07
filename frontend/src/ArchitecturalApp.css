@@ -1,0 +1,1102 @@
+/* Import Architectural Design Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+/* Architectural Design System Variables */
+:root {
+  --arch-bg: #f8f7f4;
+  --arch-surface: #ffffff;
+  --arch-surface-warm: #fefdfb;
+  --arch-border: #e8e6e1;
+  --arch-border-light: #f2f1ee;
+  --arch-text-primary: #1a1a1a;
+  --arch-text-secondary: #4a4a4a;
+  --arch-text-muted: #7a7a7a;
+  --arch-text-light: #a5a5a5;
+  --arch-accent: #2c2c2c;
+  --arch-accent-light: #f5f5f5;
+  --arch-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+  --arch-shadow-light: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --arch-shadow-minimal: 0 2px 10px rgba(0, 0, 0, 0.04);
+  --arch-radius: 2px;
+  --arch-radius-large: 4px;
+  --arch-font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --arch-font-display: 'Playfair Display', Georgia, serif;
+  --arch-transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --arch-transition-fast: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Global Reset with Architectural Precision */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--arch-font-primary);
+  background: var(--arch-bg);
+  color: var(--arch-text-primary);
+  line-height: 1.7;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+/* Login Screen - Architectural Portfolio Style */
+.vogue-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--arch-bg);
+  padding: 2rem;
+}
+
+.vogue-login-container {
+  text-align: left;
+  max-width: 640px;
+  width: 100%;
+}
+
+.vogue-title {
+  font-family: var(--arch-font-display);
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: var(--arch-text-primary);
+  margin-bottom: 2rem;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+}
+
+.vogue-subtitle {
+  font-size: 1.125rem;
+  color: var(--arch-text-secondary);
+  margin-bottom: 4rem;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.vogue-user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.vogue-user-card {
+  background: var(--arch-surface);
+  border: 1px solid var(--arch-border);
+  border-radius: var(--arch-radius);
+  padding: 3rem 2rem;
+  cursor: pointer;
+  transition: var(--arch-transition);
+  text-align: center;
+}
+
+.vogue-user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--arch-shadow-light);
+  border-color: var(--arch-accent);
+  background: var(--arch-surface-warm);
+}
+
+.vogue-user-avatar {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+  transition: var(--arch-transition);
+}
+
+.vogue-user-card:hover .vogue-user-avatar {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.vogue-user-name {
+  font-weight: 500;
+  color: var(--arch-text-primary);
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+}
+
+/* Main Application Layout */
+.vogue-app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--arch-bg);
+}
+
+/* Header - Clean Architectural Style */
+.vogue-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 4rem;
+  border-bottom: 1px solid var(--arch-border);
+  background: var(--arch-surface-warm);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.vogue-header-left {
+  flex: 1;
+}
+
+.vogue-logo {
+  font-family: var(--arch-font-display);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--arch-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.vogue-header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.vogue-sessions-btn,
+.vogue-new-chat,
+.vogue-report-btn {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--arch-border);
+  border-radius: var(--arch-radius);
+  background: var(--arch-surface);
+  color: var(--arch-text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--arch-transition);
+  letter-spacing: -0.01em;
+}
+
+.vogue-sessions-btn:hover,
+.vogue-new-chat:hover,
+.vogue-report-btn:hover:not(:disabled) {
+  background: var(--arch-accent-light);
+  border-color: var(--arch-text-secondary);
+  transform: translateY(-1px);
+}
+
+.vogue-report-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* User Dropdown */
+.vogue-user-dropdown {
+  position: relative;
+}
+
+.vogue-user-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--arch-border);
+  border-radius: var(--arch-radius);
+  background: var(--arch-surface);
+  cursor: pointer;
+  transition: var(--arch-transition);
+}
+
+.vogue-user-trigger:hover {
+  background: var(--arch-accent-light);
+  transform: translateY(-1px);
+}
+
+.vogue-user-avatar-small {
+  font-size: 1.125rem;
+}
+
+.vogue-user-name-small {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--arch-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.vogue-user-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.75rem;
+  background: var(--arch-surface);
+  border: 1px solid var(--arch-border);
+  border-radius: var(--arch-radius-large);
+  box-shadow: var(--arch-shadow);
+  min-width: 200px;
+  z-index: 200;
+  overflow: hidden;
+}
+
+.vogue-user-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  transition: var(--arch-transition-fast);
+  font-size: 0.875rem;
+}
+
+.vogue-user-menu-item:hover {
+  background: var(--arch-accent-light);
+}
+
+.vogue-user-menu-item.active {
+  background: var(--arch-accent-light);
+  color: var(--user-color, var(--arch-accent));
+  font-weight: 500;
+}
+
+/* Sessions Sidebar */
+.vogue-sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+}
+
+.vogue-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 480px;
+  background: var(--arch-surface);
+  border-right: 1px solid var(--arch-border);
+  box-shadow: var(--arch-shadow);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  animation: slideInLeft 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0);
+  }
+}
+
+.vogue-sidebar-header {
+  padding: 3rem 2.5rem 2rem;
+  border-bottom: 1px solid var(--arch-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vogue-sidebar-header h3 {
+  font-family: var(--arch-font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--arch-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.vogue-close-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--arch-border);
+  border-radius: 50%;
+  background: var(--arch-surface);
+  color: var(--arch-text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: var(--arch-transition);
+}
+
+.vogue-close-btn:hover {
+  background: var(--arch-accent-light);
+  color: var(--arch-text-primary);
+}
+
+.vogue-sidebar-content {
+  flex: 1;
+  padding: 2rem 2.5rem;
+  overflow-y: auto;
+}
+
+.vogue-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: var(--arch-text-muted);
+  gap: 1rem;
+}
+
+.vogue-loading p {
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.vogue-sessions-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vogue-session-card {
+  padding: 2rem;
+  border: 1px solid var(--arch-border);
+  border-radius: var(--arch-radius-large);
+  background: var(--arch-surface);
+  cursor: pointer;
+  transition: var(--arch-transition);
+}
+
+.vogue-session-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--arch-shadow-light);
+  border-color: var(--arch-accent);
+}
+
+.vogue-session-preview {
+  font-size: 0.9rem;
+  color: var(--arch-text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.vogue-session-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--arch-text-muted);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.vogue-empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--arch-text-muted);
+}
+
+.vogue-empty-state p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.vogue-empty-state p:first-child {
+  font-weight: 500;
+  color: var(--arch-text-secondary);
+}
+
+/* Chat Area - Editorial Layout */
+.vogue-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 121px);
+}
+
+.vogue-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  min-height: 0; /* Important for flex scrolling */
+}
+
+.vogue-message {
+  display: flex;
+  animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vogue-message--user {
+  justify-content: flex-end;
+}
+
+.vogue-message--assistant {
+  justify-content: flex-start;
+}
+
+.vogue-message-content {
+  max-width: 85%;
+  padding: 2.5rem 3rem;
+  border-radius: var(--arch-radius-large);
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 400;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.vogue-message--user .vogue-message-content {
+  background: var(--arch-accent);
+  color: var(--arch-surface);
+  border-bottom-right-radius: var(--arch-radius);
+}
+
+.vogue-message--assistant .vogue-message-content {
+  background: var(--arch-surface);
+  color: var(--arch-text-primary);
+  border: 1px solid var(--arch-border);
+  border-bottom-left-radius: var(--arch-radius);
+  box-shadow: var(--arch-shadow-minimal);
+}
+
+.vogue-message-content p {
+  margin: 0 0 1.25rem 0;
+}
+
+.vogue-message-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Markdown Container Styling */
+.vogue-markdown {
+  width: 100%;
+  max-width: none;
+}
+
+.vogue-markdown > *:first-child {
+  margin-top: 0;
+}
+
+.vogue-markdown > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Ensure long text wraps properly */
+.vogue-markdown p,
+.vogue-markdown li,
+.vogue-markdown td,
+.vogue-markdown th {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Enhanced list styling */
+.vogue-markdown ul,
+.vogue-markdown ol {
+  padding-left: 2rem;
+  margin: 1.5rem 0;
+}
+
+.vogue-markdown li {
+  margin: 0.75rem 0;
+  line-height: 1.7;
+}
+
+.vogue-markdown li > p {
+  margin: 0.5rem 0;
+}
+
+/* Nested list styling */
+.vogue-markdown li ul,
+.vogue-markdown li ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+/* Enhanced blockquote styling */
+.vogue-markdown blockquote {
+  border-left: 4px solid var(--arch-border);
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  background: rgba(0, 0, 0, 0.02);
+  font-style: italic;
+  color: var(--arch-text-secondary);
+  border-radius: 0 var(--arch-radius) var(--arch-radius) 0;
+}
+
+.vogue-markdown blockquote p {
+  margin: 0.75rem 0;
+}
+
+.vogue-markdown blockquote p:first-child {
+  margin-top: 0;
+}
+
+.vogue-markdown blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Typography - Editorial Style */
+.vogue-message-content h1,
+.vogue-message-content h2,
+.vogue-message-content h3,
+.vogue-message-content h4,
+.vogue-message-content h5,
+.vogue-message-content h6 {
+  font-family: var(--arch-font-display);
+  margin: 2rem 0 1rem 0;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.vogue-message-content h1:first-child,
+.vogue-message-content h2:first-child,
+.vogue-message-content h3:first-child {
+  margin-top: 0;
+}
+
+.vogue-message-content h1 { 
+  font-size: 2rem;
+  font-weight: 700;
+}
+.vogue-message-content h2 { 
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.vogue-message-content h3 { 
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.vogue-message-content ul,
+.vogue-message-content ol {
+  margin: 1.25rem 0;
+  padding-left: 2rem;
+}
+
+.vogue-message-content li {
+  margin: 0.5rem 0;
+  line-height: 1.7;
+}
+
+/* Enhanced Code Styling */
+.vogue-message-content code.inline-code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--arch-radius);
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
+  font-size: 0.875rem;
+  color: var(--arch-text-primary);
+  white-space: nowrap;
+}
+
+.vogue-message-content code:not(.inline-code) {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
+  font-size: 0.875rem;
+}
+
+.vogue-message-content pre {
+  background: rgba(0, 0, 0, 0.04);
+  padding: 2rem;
+  border-radius: var(--arch-radius-large);
+  overflow-x: auto;
+  margin: 2rem 0;
+  border: 1px solid var(--arch-border-light);
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.vogue-message-content pre code {
+  background: none;
+  padding: 0;
+  color: var(--arch-text-primary);
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.vogue-message-content blockquote {
+  border-left: 4px solid var(--arch-border);
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.02);
+  font-style: italic;
+  color: var(--arch-text-secondary);
+}
+
+/* Enhanced Table Wrapper */
+.vogue-message-content .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 2rem 0;
+  border-radius: var(--arch-radius-large);
+  border: 1px solid var(--arch-border);
+  box-shadow: var(--arch-shadow-minimal);
+  max-width: 100%;
+  /* Ensure tables scroll horizontally on small screens */
+  -webkit-overflow-scrolling: touch;
+}
+
+.vogue-message-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  min-width: 500px; /* Ensure tables don't get too cramped */
+  font-size: 0.95rem;
+}
+
+.vogue-message-content thead {
+  background: var(--arch-accent-light);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.vogue-message-content th {
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--arch-text-primary);
+  border-bottom: 2px solid var(--arch-border);
+  border-right: 1px solid var(--arch-border);
+  background: var(--arch-accent-light);
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+}
+
+.vogue-message-content th:last-child {
+  border-right: none;
+}
+
+.vogue-message-content tbody tr {
+  transition: var(--arch-transition-fast);
+}
+
+.vogue-message-content tbody tr:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.vogue-message-content td {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--arch-border-light);
+  border-right: 1px solid var(--arch-border-light);
+  color: var(--arch-text-primary);
+  line-height: 1.6;
+  vertical-align: top;
+}
+
+.vogue-message-content td:last-child {
+  border-right: none;
+}
+
+.vogue-message-content tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Alternate row coloring for better readability */
+.vogue-message-content tbody tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.01);
+}
+
+.vogue-message-content tbody tr:nth-child(even):hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* Typing Indicator */
+.vogue-typing {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.vogue-typing span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--arch-text-muted);
+  animation: typing 1.6s infinite ease-in-out;
+}
+
+.vogue-typing span:nth-child(1) { animation-delay: -0.32s; }
+.vogue-typing span:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing {
+  0%, 80%, 100% { 
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  40% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Input Area - Refined */
+.vogue-input-area {
+  padding: 3rem 4rem;
+  border-top: 1px solid var(--arch-border);
+  background: var(--arch-surface-warm);
+}
+
+.vogue-input-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.vogue-input {
+  flex: 1;
+  padding: 1.25rem 1.75rem;
+  border: 1px solid var(--arch-border);
+  border-radius: var(--arch-radius-large);
+  font-size: 1rem;
+  background: var(--arch-surface);
+  color: var(--arch-text-primary);
+  transition: var(--arch-transition);
+  font-family: var(--arch-font-primary);
+  line-height: 1.5;
+}
+
+.vogue-input:focus {
+  outline: none;
+  border-color: var(--arch-accent);
+  box-shadow: 0 0 0 4px rgba(44, 44, 44, 0.08);
+}
+
+.vogue-input::placeholder {
+  color: var(--arch-text-muted);
+  font-weight: 400;
+}
+
+.vogue-send-btn {
+  width: 52px;
+  height: 52px;
+  border: 1px solid var(--arch-border);
+  border-radius: 50%;
+  background: var(--arch-accent);
+  color: var(--arch-surface);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  transition: var(--arch-transition);
+}
+
+.vogue-send-btn:hover:not(:disabled) {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: var(--arch-shadow-light);
+}
+
+.vogue-send-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Modal - Architectural Precision */
+.vogue-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+}
+
+.vogue-modal {
+  background: var(--arch-surface);
+  border-radius: var(--arch-radius-large);
+  padding: 3rem;
+  max-width: 600px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: var(--arch-shadow);
+  border: 1px solid var(--arch-border);
+}
+
+.vogue-modal-title {
+  font-family: var(--arch-font-display);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--arch-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.vogue-modal-subtitle {
+  color: var(--arch-text-secondary);
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.vogue-form-group {
+  margin-bottom: 2rem;
+}
+
+.vogue-form-group label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  color: var(--arch-text-primary);
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+}
+
+.vogue-sessions-list {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid var(--arch-border);
+  border-radius: var(--arch-radius-large);
+  background: var(--arch-surface);
+}
+
+.vogue-session-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--arch-border-light);
+  cursor: pointer;
+  transition: var(--arch-transition-fast);
+}
+
+.vogue-session-item:last-child {
+  border-bottom: none;
+}
+
+.vogue-session-item:hover {
+  background: var(--arch-accent-light);
+}
+
+.vogue-session-preview {
+  font-size: 0.875rem;
+  color: var(--arch-text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.vogue-session-meta {
+  font-size: 0.75rem;
+  color: var(--arch-text-muted);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.vogue-modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 3rem;
+}
+
+.vogue-btn {
+  padding: 1rem 2rem;
+  border: 1px solid var(--arch-border);
+  border-radius: var(--arch-radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--arch-transition);
+  font-family: var(--arch-font-primary);
+  letter-spacing: -0.01em;
+}
+
+.vogue-btn--primary {
+  background: var(--arch-accent);
+  color: var(--arch-surface);
+  border-color: var(--arch-accent);
+}
+
+.vogue-btn--primary:hover:not(:disabled) {
+  background: rgba(44, 44, 44, 0.9);
+  transform: translateY(-1px);
+}
+
+.vogue-btn--secondary {
+  background: var(--arch-surface);
+  color: var(--arch-text-primary);
+}
+
+.vogue-btn--secondary:hover {
+  background: var(--arch-accent-light);
+  transform: translateY(-1px);
+}
+
+.vogue-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Responsive Design - Architectural Breakpoints */
+@media (max-width: 1024px) {
+  .vogue-messages {
+    padding: 3rem 2.5rem;
+  }
+  
+  .vogue-header {
+    padding: 2rem 3rem;
+  }
+  
+  .vogue-input-area {
+    padding: 2rem 3rem;
+  }
+  
+  .vogue-sidebar {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .vogue-title {
+    font-size: 3rem;
+  }
+  
+  .vogue-header {
+    padding: 1.5rem 2rem;
+  }
+  
+  .vogue-logo {
+    font-size: 1.5rem;
+  }
+  
+  .vogue-messages {
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
+  
+  .vogue-message-content {
+    max-width: 90%;
+    padding: 2rem 1.5rem;
+  }
+  
+  .vogue-input-area {
+    padding: 2rem 1.5rem;
+  }
+  
+  .vogue-modal {
+    margin: 1rem;
+    padding: 2rem;
+  }
+  
+  .vogue-user-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .vogue-header-right {
+    gap: 0.75rem;
+  }
+  
+  .vogue-sessions-btn,
+  .vogue-new-chat,
+  .vogue-report-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .vogue-sidebar {
+    width: 100%;
+  }
+  
+  .vogue-sidebar-header {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+  
+  .vogue-sidebar-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .vogue-title {
+    font-size: 2.5rem;
+  }
+  
+  .vogue-message-content {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .vogue-modal-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Custom Scrollbar - Architectural */
+.vogue-messages::-webkit-scrollbar,
+.vogue-sessions-list::-webkit-scrollbar,
+.vogue-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.vogue-messages::-webkit-scrollbar-track,
+.vogue-sessions-list::-webkit-scrollbar-track,
+.vogue-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.vogue-messages::-webkit-scrollbar-thumb,
+.vogue-sessions-list::-webkit-scrollbar-thumb,
+.vogue-modal::-webkit-scrollbar-thumb {
+  background: var(--arch-border);
+  border-radius: 4px;
+}
+
+.vogue-messages::-webkit-scrollbar-thumb:hover,
+.vogue-sessions-list::-webkit-scrollbar-thumb:hover,
+.vogue-modal::-webkit-scrollbar-thumb:hover {
+  background: var(--arch-text-muted);
+}
+
+/* Focus States - Accessibility */
+button:focus-visible,
+input:focus-visible,
+.vogue-user-card:focus-visible {
+  outline: 2px solid var(--arch-accent);
+  outline-offset: 2px;
+}
+
+/* Enhanced Animation Performance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
