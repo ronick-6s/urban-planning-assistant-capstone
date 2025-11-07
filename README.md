@@ -84,7 +84,7 @@ ON conversation_memory USING hnsw (embedding vector_cosine_ops);
 - **Context Retrieval**: Relevant past conversations enhance responses
 - **User Isolation**: Each user's conversations remain separate
 - **Semantic Similarity**: Vector embeddings enable contextual memory recall
-- **Performance Optimized**: pgvector provides enterprise-grade search speed
+- **Performance Optimized**: pgvector provides enhanced search speed
 
 ## CLOUD Personal Cloud Storage
 
@@ -113,9 +113,8 @@ ON conversation_memory USING hnsw (embedding vector_cosine_ops);
 ### Cloud Features
 - **Automatic Report Generation**: PDF, HTML, and text formats
 - **Email Delivery**: Reports emailed to user's address with Dropbox links
-- **Admin Dashboard**: Admin can view all user folders and manage access
+- **Admin Dashboard(Dropbox)**: Admin can view all user folders and manage access
 - **Secure Sharing**: Private folder links with restricted access permissions
-- **File Retention**: Configurable retention policies for storage management
 
 ### API Endpoints for Cloud Management
 ```
